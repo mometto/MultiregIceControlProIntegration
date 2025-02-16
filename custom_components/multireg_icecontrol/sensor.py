@@ -66,10 +66,10 @@ class MultiregSensor(Entity):
     def unit_of_measurement(self):
         return self._unit
 
-    def update(self):
-        """Fetch new state data from the device."""
-        result = self._client.read_holding_registers(self._register, 1, unit=1)
-        if result.isError():
-            _LOGGER.error("Modbus read error")
-        else:
-            self._state = result.registers[0]
+def update(self):
+    """Fetch new state data from the Modbus device."""
+    result = self._client.read_holding_registers(self._register, 1, unit=1)
+    if result.isError():
+        _LOGGER.error("Modbus read error for register %s", self._register)
+    else:
+        self._state = result.registers[0]
