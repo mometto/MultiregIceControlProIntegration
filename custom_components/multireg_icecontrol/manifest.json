@@ -1,0 +1,10 @@
+{
+  "domain": "multireg_icecontrol",
+  "name": "Multireg IceControl",
+  "version": "1.0.0",
+  "dependencies": [],
+  "codeowners": ["@mometto"],
+  "requirements": [],
+  "iot_class": "local_polling",
+  "integration_type": "hub"
+}
