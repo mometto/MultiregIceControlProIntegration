@@ -1,0 +1,9 @@
+{
+  "name": "Multireg IceControl",
+  "description": "Integration for Multireg IceControl Pro devices.",
+  "domain": "multireg_icecontrol",
+  "codeowners": ["@mometto"],
+  "documentation": "https://github.com/mometto/multireg_icecontrol",
+  "requirements": [],
+  "version": "1.0.0"
+}
