@@ -18,9 +18,17 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
 )
 
 SENSOR_TYPES = {
-    "zone_1_heating": {"register": 119, "unit": "°C"},
-    "zone_2_heating": {"register": 120, "unit": "°C"},
-    "energy_usage_zone_1": {"register": 108, "unit": "kWh"},
+    "zone_1_heating": {"register": 119, "unit": "°C"},  # Heating status Zone 1
+    "zone_2_heating": {"register": 120, "unit": "°C"},  # Heating status Zone 2
+    "afterrun_zone_1": {"register": 121, "unit": "min"},  # After-run time
+    "afterrun_zone_2": {"register": 122, "unit": "min"},
+    "heating_time_zone_1": {"register": 106, "unit": "h"},
+    "heating_time_zone_2": {"register": 107, "unit": "h"},
+    "total_energy_zone_1": {"register": 108, "unit": "kWh"},
+    "total_energy_zone_2": {"register": 109, "unit": "kWh"},
+    "active_alarms": {"register": 123, "unit": ""},
+    "uptime_hours": {"register": 180, "unit": "h"},
+    "uptime_years": {"register": 181, "unit": "years"},
 }
 
 def setup_platform(hass, config, add_entities, discovery_info=None):
